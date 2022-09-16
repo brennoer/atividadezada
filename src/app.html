@@ -1,0 +1,28 @@
+<template>
+	<lightning-card title="Exclui as 2 div de baixo">
+		<div class="slds-p-around_medium">
+			<h1>{empresa1.empresa}</h1>
+			<p>{empresa1.cnpj}</p>
+			<p>{empresa1.endereco}</p>
+		</div>
+		<div class="slds-p-around_medium" if:true={visivel}>
+			<h1>{empresa2.empresa}</h1>
+			<p>{empresa2.cnpj}</p>
+			<p>{empresa2.endereco}</p>
+		</div>
+		<div class="slds-p-around_medium" if:true={visivel}>
+			<h1>{empresa3.empresa}</h1>
+			<p>{empresa3.cnpj}</p>
+			<p>{empresa3.endereco}</p>
+		</div>
+		<lightning-button variant="destructive" label="Detonador" title="Destructive action" onclick={detonaTudo}
+			class="slds-m-left_x-small"></lightning-button>
+		<br></br>
+	</lightning-card>
+	<lightning-card title="Quem é esse pokemon">
+		<img src= {imagemFinal}>
+		<lightning-button variant="success" label="revela" title="Destructive action" onclick={revelaPkmn}
+			class="slds-m-left_x-small"></lightning-button>
+	</lightning-card>
+
+</template>
